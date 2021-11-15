@@ -8,6 +8,7 @@
         SuperPosition();
         TestBellState();
         RandomNumberGenerator();
+        FactorizeWithGrovers(200);
     }
 
     operation SuperPosition() : Unit {
