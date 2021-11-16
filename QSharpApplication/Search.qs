@@ -52,10 +52,10 @@
         use (dividendQubits, resultQubits) = (Qubit[size], Qubit[size]);
         let xs = LittleEndian(dividendQubits);
         let ys = LittleEndian(divisorRegister);
-        let result = LittleEndian(resultQubits);
+        mutable result = LittleEndian(resultQubits);
         within{
             ApplyXorInPlace(dividend, xs);
-            DivideI(xs, ys, result);
+            //set result = DividedI(xs, ys);
             ApplyToEachA(X, xs!);
         }
         apply{
